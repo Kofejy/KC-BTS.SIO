@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurt CHAVATTE - BTS SIO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Effet fade Apple */
+    .section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Effet de lumière sur les titres */
+    .glow-title {
+      background: linear-gradient(90deg, #ff2a2a, #ff5050, #ff2a2a);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: glowMove 4s ease-in-out infinite;
+    }
+    @keyframes glowMove {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+    }
+
+    /* Bordures premium */
+    .premium-border {
+      border: 1px solid rgba(255, 50, 50, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Effet card Apple */
+    .card {
+      background: rgba(20, 20, 20, 0.6);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 30px rgba(255, 40, 40, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl premium-border">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-red-400 tracking-wide">Kurt CHAVATTE</h1>
+      <nav>
+        <ul class="flex gap-10 text-lg font-medium">
+          <li><a href="#hero" class="hover:text-red-400">Accueil</a></li>
+          <li><a href="#bts" class="hover:text-red-400">BTS SIO</a></li>
+          <li><a href="#alternance" class="hover:text-red-400">Alternance</a></li>
+          <li><a href="#competences" class="hover:text-red-400">Compétences</a></li>
+          <li><a href="#contact" class="hover:text-red-400">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION HERO PREMIUM -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 section">
+    <h1 class="text-6xl md:text-7xl font-bold mb-6">
+      <span class="glow-title">Mon parcours durant ces 2 années</span>
+    </h1>
+    <p class="text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
+      Ce site à été créé dans le but de vous présenter mon parcours durant mon <span class="text-red-400 font-semibold">BTS SIO</span> ainsi que mon <span class="text-red-400 font-semibold">alternance</span>, 
+      le tout sous forme de porte-feuille de compétences.
+    </p>
+    <a href="#bts" class="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold shadow-md">Explorer</a>
+  </section>
+
+  <!-- SECTION BTS -->
+  <section id="bts" class="min-h-screen flex items-center bg-black px-6 section">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <h2 class="text-5xl font-bold"><span class="glow-title">BTS SIO</span> 📚</h2>
+      <div class="card">
+        <p class="text-lg leading-relaxed">
+          Afin de pouvoir travailler dans le domaine de l'informatique pour lequel 
+          j'éprouve un très grand intérêt depuis mon plus jeune âge, j'ai décidé faire un BTS SIO option SISR (Réseau) en alternance, dans laquelle je peux pleinement tirer profit de mes compétences.
+        </p>
+      </div>
+      <div class="card">
+        <p class="text-lg leading-relaxed">
+          Tout au long de ces deux années, j'ai pu étudier plusieurs projets, comme la mise en place de Serveurs Windows, d'une arborressence Active Directory, ainsi que leurs GPO.
+          <br>Ce que je retiendrai de mon parcours est qu'il ne faut jamais abandonner et aller jusqu'au bout des projets, et que le résultat final suffira à se satisfaire du temps passé sur ce dernier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION ALTERNANCE -->
+  <section id="alternance" class="min-h-screen flex items-center bg-gray-900 px-6 section">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <h2 class="text-5xl font-bold"><span class="glow-title">Alternance</span> 💼</h2>
+      <div class="card">
+        <h1 class="text-3xl font-bold"><span class="glow-title">L'entreprise</span></h1>
+        <p class="text-lg leading-relaxed">
+          L'entreprise dans laquelle j'ai pu effectuer mon alternance se nomme Dupont Restauration.
+          <br>Cette dernière bien que présente partout en France est basée à Libercourt, et son coeur de métier est la restauration collective. D'un artisan dénommé Roger Dupont s'étant installé à Lille en tant que Boucher – Charcutier – Traiteur, à Leader incontestable de la restauration 
+          sous contrat, Dupont Restauration est devenu un acteur majeur et national de son domaine.
+        </p>
+      </div>
+      <div class="card">
+        <h1 class="text-3xl font-bold"><span class="glow-title">Mes missions</span></h1>
+        <p class="text-lg leading-relaxed">
+          Durant cette année, j'ai pu être amené à rencontré de nombreuses situations diverses et variés. De la simple configuration d'imprimante à la gestion de crise suite à une migration de tenant microsoft, 
+          il a fallu s'adapter à chaque situations afin de pouvoir répondre le mieux possible à chaque demande ou incident que j'ai confronté.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION COMPETENCES PREMIUM -->
+  <section id="competences" class="min-h-screen flex items-center bg-black px-6 section">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <h2 class="text-5xl font-bold"><span class="glow-title">Compétences</span> 🛠️</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card"><h3 class="text-xl text-red-400 font-semibold mb-3">💻 Développement</h3><p>HTML, CSS, PHP, Python, SQL…</p></div>
+        <div class="card"><h3 class="text-xl text-red-400 font-semibold mb-3">🌐 Réseaux</h3><p>Linux, Windows Server, Cisco…</p></div>
+        <div class="card"><h3 class="text-xl text-red-400 font-semibold mb-3">🔒 Cybersécurité</h3><p>RGPD, sauvegardes, gestion des accès…</p></div>
+        <div class="card"><h3 class="text-xl text-red-400 font-semibold mb-3">🧰 Outils</h3><p>Git, MySQL, VS Code, VMware, PowerShell,…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT PREMIUM -->
+  <section id="contact" class="min-h-screen flex justify-center items-center bg-gray-900 px-6 section">
+    <div class="text-center max-w-3xl">
+      <h2 class="text-5xl font-bold mb-6"><span class="glow-title">Contact</span> 📩</h2>
+      <p class="text-lg text-gray-300 mb-8">Comment me joindre :</p>
+      <a class="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold shadow-xl" href="mailto:kurtchavatte@gmail.com">Me contacter</a>
+      <a class="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold shadow-xl" href="CV-Kurt-Chavatte.pdf" download="CV-Kurt-Chavatte.pdf">Télécharger mon CV</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-gray-500 py-10 border-t border-red-900/40 bg-black/60 backdrop-blur-xl">
+    © 2025 - KC - BTS.SIO
+  </footer>
+
+  <!-- JS pour fade-in sections -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+</html>
